@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Inscrições - Competição de RoboCode - Expotec 2011</title>
+        <meta charset="${_response_encoding}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/bootstrap.css'}"> 
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+        #{get 'moreStyles' /}
+        <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{get 'moreScripts' /}
+        
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	    <!--[if lt IE 9]>
+	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+	
+	    <!-- Le styles -->
+	    <style type="text/css">
+	      body {
+	        padding-top: 60px;
+	      }
+	    </style>        
+    </head>
+    <body>
+    	<div class="topbar">
+	      <div class="fill">
+	        <div class="container-fluid">
+	          <a class="brand" href="#">Inscrições - Competição RoboCode - Expotec 2011</a>
+	        </div>
+	      </div>
+	    </div>
+	    
+	    <div class="container">
+			<div class="content">
+				#{doLayout /}
+			</div>
+		</div>
+		
+        <footer class="footer">
+	      <div class="container">
+	        <p class="pull-right"><a href="#">Back to top</a></p>
+	        <p>
+	          Designed and built with all the love in the world <a target="_blank" href="http://twitter.com/twitter">@twitter</a> by <a target="_blank" href="http://twitter.com/mdo">@mdo</a> and <a target="_blank" href="http://twitter.com/fat">@fat</a>.<br>
+	          Code licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+	        </p>
+	      </div>
+	    </footer>
+        
+    </body>
+</html>

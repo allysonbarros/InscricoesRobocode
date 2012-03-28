@@ -1,0 +1,76 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<!-- Main hero unit for a primary marketing message or call to action 
+<div class="hero-unit">
+  <h1>Hello, world!</h1>
+  <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+  <p><a class="btn primary large">Learn more »</a></p>
+</div>-->
+
+<div class="page-header">
+<h1>
+	Inscrições - Competição de RoboCode - Expotec 2011
+</h1>
+</div>
+
+<div class="row">
+  <div class="span16">
+		<br/>
+    #{form @Application.cadastrar()}
+			#{ifErrors}
+			   <h1>Oops... Não foi possível efetuar sua inscrição!</h1>
+
+			   #{errors}
+			       <li style="color:#CC0000;"><strong>${error}</strong></li>
+			   #{/errors}
+			
+			<br/><br/><br/>
+			#{/ifErrors}
+			
+			
+			<div class="clearfix">
+        <label for="u.cpf">CPF:</label>
+        <div class="input">
+          <input type="text" size="30" name="u.cpf" id="u.cpf" class="xlarge" value="${flash['u.cpf']}">
+        </div>
+      </div>
+			
+			<div class="clearfix">
+        <label for="u.matricula">Matrícula:</label>
+        <div class="input">
+          <input type="text" size="30" name="u.matricula" id="u.matricula" class="xlarge" value="${flash['u.matricula']}">
+        </div>
+      </div>
+			
+			<div class="clearfix">
+        <label for="u.nomeCompleto">Nome Completo:</label>
+        <div class="input">
+          <input type="text" size="30" name="u.nomeCompleto" id="u.nomeCompleto" class="xlarge" value="${flash['u.nomeCompleto']}">
+        </div>
+      </div>
+
+			<div class="clearfix">
+        <label for="u.email">Email:</label>
+        <div class="input">
+          <input type="text" size="30" name="u.email" id="u.email" class="xlarge" value="${flash['u.email']}">
+        </div>
+      </div>
+
+			<div class="clearfix">
+        <label for="u.telefone">Telefone:</label>
+        <div class="input">
+          <input type="text" size="30" name="u.telefone" id="u.telefone" class="xlarge" value="${flash['u.telefone']}">
+        </div>
+      </div>
+			
+			<div class="clearfix" style="padding-left:242px;">
+				<input class="btn primary" type="submit" value="Inscrever-se">
+				<input class="btn secundary" type="submit" value="Cancelar">
+			</div>
+			
+    #{/form}
+  </div>
+</div>
+
+    
